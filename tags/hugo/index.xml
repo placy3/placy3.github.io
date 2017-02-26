@@ -47,7 +47,6 @@ tags:
 &lt;/blockquote&gt;
 
 &lt;p&gt;生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……&lt;br /&gt;
-或运行&amp;rsquo;hugo&amp;rsquo;之后在public里面打开404.html查看即可&lt;br /&gt;
 &lt;a href=&#34;https://gohugo.io/templates/404/&#34;&gt;官方文档&lt;/a&gt;，请&lt;/p&gt;
 
 &lt;hr /&gt;
