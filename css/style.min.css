@@ -13,11 +13,10 @@ a:hover{
 	text-decoration:underline;
 }
 p{
-		margin-top:5px;
+	margin-top:5px;
 	font-size:calc(16px + 5 * ((100vw - 420px) / 860));
 }
 .content-tags p{
-	max-height: 30vh;
 	overflow: hidden;
 	-webkit-mask-image: 
 	-webkit-gradient(linear, left top, left bottom, 
