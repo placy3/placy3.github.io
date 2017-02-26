@@ -42,6 +42,13 @@ tags:
 
 &lt;p&gt;这样的才是真正会创建tags的&lt;/p&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;localhost的404页面始终是404 page not found&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……&lt;br /&gt;
+&lt;a href=&#34;https://gohugo.io/templates/404/&#34;&gt;官方文档&lt;/a&gt;，请&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;本身也有一点前端经验……但是怎么说这个也超出我的知识范围了&lt;br /&gt;
