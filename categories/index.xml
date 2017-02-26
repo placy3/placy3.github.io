@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Placy</title>
+    <link>https://placy3.github.io/categories/index.xml</link>
+    <description>Recent content on Placy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us, zh-CN</language>
+    <atom:link href="https://placy3.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>第一篇</title>
+      <link>https://placy3.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
+      <pubDate>Sun, 26 Feb 2017 11:07:28 +0000</pubDate>
+      
+      <guid>https://placy3.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
+      <description>
+
+&lt;h1 id=&#34;github小白尝试搭博客中&#34;&gt;github小白尝试搭博客中&lt;/h1&gt;
+
+&lt;h2 id=&#34;网站依然是wip&#34;&gt;网站依然是WIP&lt;/h2&gt;
+
+&lt;p&gt;本身也有一点前端经验……但是怎么说这个也超出我的知识范围了&lt;br /&gt;
+本周是week 7，没课，试着瞎折腾。&lt;br /&gt;
+话说这么默认theme就没有一个黑底白字的嘛（个人爱好）是时候customerise了&lt;br /&gt;
+sublime输入中文效果不是很好囧&lt;br /&gt;
+这也是第一次用Markdown写东西，本文可能随时有被删掉的可能。&lt;br /&gt;
+下周需要关心的事有&lt;br /&gt;
+* Java作业&lt;br /&gt;
+* 数据库系统&lt;br /&gt;
+* 读书复习SQL&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

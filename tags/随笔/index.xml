@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Posts on Placy </title>
+      <title>随笔 on Placy </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>https://placy3.github.io/post/index.xml</link>
+    <link>https://placy3.github.io/tags/%E9%9A%8F%E7%AC%94/index.xml</link>
     <language>en-uk</language>
     
     <copyright>&amp;copy 2017. placy3 on github.</copyright>
-    <updated>Sun, 26 Feb 2017 11:07:28 UTC</updated>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
       <title>网站依然WIP</title>
