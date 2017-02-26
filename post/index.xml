@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Posts on Placy </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://placy3.github.io/post/index.xml</link>
+    <language>en-uk</language>
+    
+    <copyright>&amp;copy 2017. placy3 on github.</copyright>
+    <updated>Sun, 26 Feb 2017 11:07:28 UTC</updated>
+    
+    <item>
+      <title>网站依然WIP</title>
+      <link>https://placy3.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
+      <pubDate>Sun, 26 Feb 2017 11:07:28 UTC</pubDate>
+      
+      <guid>https://placy3.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
+      <description>
+
+&lt;h1 id=&#34;小白尝试搭博客中&#34;&gt;小白尝试搭博客中&lt;/h1&gt;
+
+&lt;p&gt;Hugo建博客时遇到的一些问题：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;不加载css，显示不安全&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;因为github给页面用的是https://，所以确保baseUrl写的也是https://，html中的css/js引用链接就也是“安全”的了。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;config里设定了tag = &amp;ldquo;tags&amp;rdquo;，文章开头也写了tags= [&amp;ldquo;xx&amp;rdquo;, &amp;ldquo;xxx&amp;rdquo;]，但是博文的tag死活不变&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;简单的解决方案：换主题。&lt;br /&gt;
+详细的解决方案：检查主题的layouts/_default/文件夹（网站根目录的layout默认是空的），single是单篇博文，打开检查生成方式。&lt;br /&gt;
+像&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if isset .Params &amp;quot;tags&amp;quot; }}
+tags:
+{{ range .Params.tags }}{{ . }} {{ end }}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样的才是真正会创建tags的&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;本身也有一点前端经验……但是怎么说这个也超出我的知识范围了&lt;br /&gt;
+本周是week 7，没课，试着瞎折腾。&lt;br /&gt;
+sublime输入中文效果不是很好囧&lt;br /&gt;
+这也是第一次用Markdown写东西，本文随时可能回炉重造。&lt;br /&gt;
+下周需要关心的事有&lt;br /&gt;
+· Java作业&lt;br /&gt;
+· 数据库系统&lt;br /&gt;
+· 读书复习SQL&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
