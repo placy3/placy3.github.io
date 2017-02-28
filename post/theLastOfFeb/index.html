@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content=" 解决了一点问题，顺手记录一下 &middot;  Placy" />
+  <meta property="og:site_name" content="Placy" />
+  <meta property="og:url" content="https://placy3.github.io/post/theLastOfFeb/" />
+  <meta name="theme" content="darksimplicity">
+  <meta name="generator" content="Hugo 0.18.1" />
+  
+  
+  <base href="https://placy3.github.io/">
+  <title>解决了一点问题，顺手记录一下</title>
+  <link rel="stylesheet" href="https://placy3.github.io/css/style.min.css">
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="navbar">
+        <ul class="navbar-list">
+          
+        </ul>
+    </div>
+    <div class="header">
+      <a href="https://placy3.github.io/" class="title">Placy</a>
+      <span class="title-description">&nbsp;&nbsp;|&nbsp;&nbsp;<i>Deep Dark Fantasy</i> </span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Blog">
+    <div class="post-title">
+      <a class="post-title-link" href="https://placy3.github.io/post/theLastOfFeb/" itemprop="name">解决了一点问题，顺手记录一下</a>
+
+      <div class="date">
+        Tue, 28 Feb, 2017
+      </div>
+      
+    </div>
+        <div class="tags">tags:</br>
+          <span itemprop="keywords"><a class="tag-link" href="https://placy3.github.io/tags/%E5%85%BC%E5%AE%B9%E6%80%A7" rel="tag">兼容性 </a><a class="tag-link" href="https://placy3.github.io/tags/css" rel="tag">CSS </a><a class="tag-link" href="https://placy3.github.io/tags/hugo" rel="tag">hugo </a>
+          </span>
+      </div>
+      <div class="content-full">
+
+<h1 id="config-toml">Config.toml</h1>
+
+<p>反正没什么偏好，就先用着.tmol格式了。</p>
+
+<h3 id="hascjklanguage">hasCJKLanguage</h3>
+
+<p>如果要写中文博客的话，config里最好把这个设为true（表示含有中文/日文/韩文）。不然的话会有难以预料的麻烦（尤其是开始写文章的时候只是套主题并不去看templates）。像我一开始没加的时候，主页的博客预览是全文显示的，丑到直男审美都看不下去。加了之后神奇地发现博客预览只剩下两行了。原来我这个主题生成页面时会剪两行的内容放在主页作为预览，但是如果它不知道是中文，字数统计就会出问题，连带着预览整个崩溃。</p>
+
+<h3 id="代码高亮-pygments方式">代码高亮（Pygments方式）</h3>
+
+<p>按照Hugo官方文档来，把pygments装好，config里加一句<code>pygmentsCodeFences = true</code>，再在代码块的```之后声明语言即可，默认主题是monokai。<br />
+例如下面那个代码块在md文件里的开头是</p>
+
+<blockquote>
+<p>``` CSS</p>
+</blockquote>
+
+<p><strong>但是！</strong><br />
+<strong>文档在介绍完pygments之后又来了一段Disclaimers。</strong><br />
+第一句就是：</p>
+
+<blockquote>
+<p>Pygments is relatively slow and <em>causes a performance hit when building your site</em>, but Hugo has been designed to cache the results to disk.</p>
+</blockquote>
+
+<p>看着下面的js高亮方式，我顿时有种想要删号重练的心情。貌似那个改CSS配色还比较方便。<br />
+下次看看有什么可以<em>显示行号</em> 又好自定义的，今天折腾不动了。</p>
+
+<h1 id="flex-ie">Flex &amp; IE</h1>
+
+<p>今天用IE 11开了一下这个博客，内容完全挤成一条，F12一看是被挤扁的是article元素。禁用<code>display: flex;</code>这一行就能并不优雅地解决问题。因为我这是个极简风主页，问题不大，唯一的不同就是标签错位了。<br />
+我虽然没用过flex（弹性盒子），但是硬着头皮翻看CSS的过程中，大概也有个概念。毕竟有一些神奇的计算公式出现。最后我把article的CSS部分找了出来，首先试着把兼容的各种display写法都拷了上去，然而并没有解决问题。<br />
+原因很简单，IE 11本身其实是支持 <code>display: flex</code> 的，当然不会使用其他写法了。<br />
+后来看到<a href="http://caniuse.com/#feat=flexbox">Can I use</a>里的Known Issues才精神一振，才发现还有个flex-basis属性。</p>
+
+<blockquote>
+<p><strong>flex-basis</strong> 指定了 flex 元素在主轴方向上的初始大小。</p>
+</blockquote>
+
+<p>而解决article被挤扁的方法就是给它设定一个flex-basis值，用auto还不行。
+本例中70vw足够撑满了：</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">article</span><span style="color: #f8f8f2">{</span>
+	<span style="color: #66d9ef">display</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">flex</span><span style="color: #f8f8f2">;</span>        
+	<span style="color: #66d9ef">flex-flow</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">row</span> <span style="color: #66d9ef">wrap</span><span style="color: #f8f8f2">;</span>
+	<span style="color: #66d9ef">max-width</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">100</span><span style="color: #66d9ef">%</span><span style="color: #f8f8f2">;</span>
+	<span style="color: #66d9ef">margin-left</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">auto</span><span style="color: #f8f8f2">;</span>
+	<span style="color: #66d9ef">margin-right</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">auto</span><span style="color: #f8f8f2">;</span>
+	<span style="color: #66d9ef">flex-basis</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">70</span><span style="color: #66d9ef">vw</span><span style="color: #f8f8f2">;</span>  <span style="color: #75715e">/*IE 11*/</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>恕我才疏学浅，还没明白flex-flow的作用。
+然后我还发现在IE下我给主页写的文章预览的文字渐变也没了，不过没心思改。</p>
+
+<hr />
+
+<p>关于IE和flex还有个bug：<a href="https://connect.microsoft.com/IE/feedback/details/802625/min-height-and-flexbox-flex-direction-column-dont-work-together-in-ie-10-11-preview">Min-height and flexbox (flex-direction:column) don&rsquo;t work together in IE 10 &amp; 11-preview. </a><br />
+然而微软表示，在Edge里已经解决了，现在除非安全性原因，我们并不考虑修IE的bug。<br />
+我一整个人……笑出声😆<br />
+<em>测试颜文字↑</em></p>
+
+</div>
+  </article>
+    <div class="copyright"><p>&copy 2017. placy3 on github.
+      </p>
+    </div>    
+
+</div>
+</body>
+</html>
+

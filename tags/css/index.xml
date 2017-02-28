@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Hugo on Placy </title>
+      <title>Css on Placy </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>https://placy3.github.io/tags/hugo/index.xml</link>
+    <link>https://placy3.github.io/tags/css/index.xml</link>
     <language>zh-Hans</language>
     
     <copyright>&amp;copy 2017. placy3 on github.</copyright>
@@ -77,62 +77,6 @@
 然而微软表示，在Edge里已经解决了，现在除非安全性原因，我们并不考虑修IE的bug。&lt;br /&gt;
 我一整个人……笑出声😆&lt;br /&gt;
 &lt;em&gt;测试颜文字↑&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>网站依然WIP</title>
-      <link>https://placy3.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
-      <pubDate>Sun, 26 Feb 2017 11:07:28 UTC</pubDate>
-      
-      <guid>https://placy3.github.io/post/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
-      <description>
-
-&lt;h1 id=&#34;小白尝试搭博客中&#34;&gt;小白尝试搭博客中&lt;/h1&gt;
-
-&lt;p&gt;Hugo建博客时遇到的一些问题：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;不加载css，显示不安全&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;因为github给页面用的是https://，所以确保配置文件里baseUrl写的也是https://，html中的css/js引用链接（自己的库）就也是“安全”的了。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;config里设定了tag = &amp;ldquo;tags&amp;rdquo;，文章开头也写了tags= [&amp;ldquo;xx&amp;rdquo;, &amp;ldquo;xxx&amp;rdquo;]，但是博文的tag死活不变&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;简单的解决方案：换主题。&lt;br /&gt;
-详细的解决方案：检查主题的layouts/_default/文件夹（网站根目录的layout默认是空的），single是单篇博文，打开检查生成方式。&lt;br /&gt;
-像&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;isset&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;Params&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}&lt;/span&gt;
-&lt;span style=&#34;color: #a6e22e&#34;&gt;tags&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;Params&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;tags&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}{{&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;这样的才是真正会创建tags的&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;localhost的404页面始终是404 page not found&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;用于生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……&lt;br /&gt;
-或运行&lt;code&gt;hugo&lt;/code&gt;之后在public里面打开404.html查看即可&lt;br /&gt;
-&lt;a href=&#34;https://gohugo.io/templates/404/&#34;&gt;官方文档&lt;/a&gt;，请&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;本身也有一点点儿前端经验……但是怎么说这个也超出我的知识范围了&lt;br /&gt;
-本周是week 7，没课，试着瞎折腾。&lt;br /&gt;
-sublime输入中文效果不是很好囧&lt;br /&gt;
-这也是第一次用Markdown写东西，本文随时可能回炉重造。&lt;br /&gt;
-下周需要关心的事有&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Java作业&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;数据库系统&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;读书复习SQL&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

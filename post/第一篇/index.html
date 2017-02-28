@@ -59,11 +59,10 @@
 <p>简单的解决方案：换主题。<br />
 详细的解决方案：检查主题的layouts/_default/文件夹（网站根目录的layout默认是空的），single是单篇博文，打开检查生成方式。<br />
 像</p>
-
-<pre><code>{{ if isset .Params &quot;tags&quot; }}
-tags:
-{{ range .Params.tags }}{{ . }} {{ end }}  
-</code></pre>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">{{</span> <span style="color: #66d9ef">if</span> <span style="color: #a6e22e">isset</span> <span style="color: #f8f8f2">.</span><span style="color: #a6e22e">Params</span> <span style="color: #e6db74">&quot;tags&quot;</span> <span style="color: #f8f8f2">}}</span>
+<span style="color: #a6e22e">tags</span><span style="color: #f92672">:</span>
+<span style="color: #f8f8f2">{{</span> <span style="color: #a6e22e">range</span> <span style="color: #f8f8f2">.</span><span style="color: #a6e22e">Params</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">tags</span> <span style="color: #f8f8f2">}}{{</span> <span style="color: #f8f8f2">.</span> <span style="color: #f8f8f2">}}</span> <span style="color: #f8f8f2">{{</span> <span style="color: #a6e22e">end</span> <span style="color: #f8f8f2">}}</span>  
+</pre></div>
 
 <p>这样的才是真正会创建tags的</p>
 
