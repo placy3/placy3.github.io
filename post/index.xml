@@ -25,7 +25,7 @@
 &lt;p&gt;不加载css，显示不安全&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;因为github给页面用的是https://，所以确保baseUrl写的也是https://，html中的css/js引用链接就也是“安全”的了。&lt;/p&gt;
+&lt;p&gt;因为github给页面用的是https://，所以确保配置文件里baseUrl写的也是https://，html中的css/js引用链接（自己的库）就也是“安全”的了。&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;config里设定了tag = &amp;ldquo;tags&amp;rdquo;，文章开头也写了tags= [&amp;ldquo;xx&amp;rdquo;, &amp;ldquo;xxx&amp;rdquo;]，但是博文的tag死活不变&lt;/p&gt;
@@ -46,20 +46,23 @@ tags:
 &lt;p&gt;localhost的404页面始终是404 page not found&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……&lt;br /&gt;
-或运行&amp;rsquo;hugo&amp;rsquo;之后在public里面打开404.html查看即可&lt;br /&gt;
+&lt;p&gt;用于生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……&lt;br /&gt;
+或运行&lt;code&gt;hugo&lt;/code&gt;之后在public里面打开404.html查看即可&lt;br /&gt;
 &lt;a href=&#34;https://gohugo.io/templates/404/&#34;&gt;官方文档&lt;/a&gt;，请&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;本身也有一点前端经验……但是怎么说这个也超出我的知识范围了&lt;br /&gt;
+&lt;p&gt;本身也有一点点儿前端经验……但是怎么说这个也超出我的知识范围了&lt;br /&gt;
 本周是week 7，没课，试着瞎折腾。&lt;br /&gt;
 sublime输入中文效果不是很好囧&lt;br /&gt;
 这也是第一次用Markdown写东西，本文随时可能回炉重造。&lt;br /&gt;
-下周需要关心的事有&lt;br /&gt;
-· Java作业&lt;br /&gt;
-· 数据库系统&lt;br /&gt;
-· 读书复习SQL&lt;/p&gt;
+下周需要关心的事有&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Java作业&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;数据库系统&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;读书复习SQL&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

@@ -50,7 +50,7 @@
 <p>不加载css，显示不安全</p>
 </blockquote>
 
-<p>因为github给页面用的是https://，所以确保baseUrl写的也是https://，html中的css/js引用链接就也是“安全”的了。</p>
+<p>因为github给页面用的是https://，所以确保配置文件里baseUrl写的也是https://，html中的css/js引用链接（自己的库）就也是“安全”的了。</p>
 
 <blockquote>
 <p>config里设定了tag = &ldquo;tags&rdquo;，文章开头也写了tags= [&ldquo;xx&rdquo;, &ldquo;xxx&rdquo;]，但是博文的tag死活不变</p>
@@ -71,20 +71,23 @@ tags:
 <p>localhost的404页面始终是404 page not found</p>
 </blockquote>
 
-<p>生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……<br />
-或运行&rsquo;hugo&rsquo;之后在public里面打开404.html查看即可<br />
+<p>用于生成的404.html是放在/layouts/下无误，但是只有放在服务器上（例如github pages啦）才会在404的时候用这个html渲染页面。原理我不清楚……<br />
+或运行<code>hugo</code>之后在public里面打开404.html查看即可<br />
 <a href="https://gohugo.io/templates/404/">官方文档</a>，请</p>
 
 <hr />
 
-<p>本身也有一点前端经验……但是怎么说这个也超出我的知识范围了<br />
+<p>本身也有一点点儿前端经验……但是怎么说这个也超出我的知识范围了<br />
 本周是week 7，没课，试着瞎折腾。<br />
 sublime输入中文效果不是很好囧<br />
 这也是第一次用Markdown写东西，本文随时可能回炉重造。<br />
-下周需要关心的事有<br />
-· Java作业<br />
-· 数据库系统<br />
-· 读书复习SQL</p>
+下周需要关心的事有</p>
+
+<ul>
+<li>Java作业<br /></li>
+<li>数据库系统<br /></li>
+<li>读书复习SQL<br /></li>
+</ul>
 
 </div>
   </article>
