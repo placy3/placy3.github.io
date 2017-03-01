@@ -1,11 +1,16 @@
+#description{
+	color: #727272;
+}
+
+/*以上为自行新增的CSS*/
 code{
 /*	font-size: larger;*/
 	color: #ff7400;
 }
 pre{
-	font-size: larger;
+	font-size: x-large;
 	padding: 5px;
-	background-color: #242424;
+	background-color: #1F1F1F;
 }
 a{
 	color:#7B7B7B;
