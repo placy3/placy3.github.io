@@ -10,9 +10,9 @@
     <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
-      <title>解决了一点问题，顺手记录一下</title>
+      <title>一锅乱炖的配置文件和语法高亮问题</title>
       <link>https://placy3.github.io/post/theLastOfFeb/</link>
-      <pubDate>Tue, 28 Feb 2017 19:46:15 UTC</pubDate>
+      <pubDate>Thu, 02 Mar 2017 14:40:12 UTC</pubDate>
       
       <guid>https://placy3.github.io/post/theLastOfFeb/</guid>
       <description>
@@ -23,7 +23,8 @@
 
 &lt;h3 id=&#34;hascjklanguage&#34;&gt;hasCJKLanguage&lt;/h3&gt;
 
-&lt;p&gt;如果要写中文博客的话，config里最好把这个设为true（表示含有中文/日文/韩文）。不然的话会有难以预料的麻烦（尤其是开始写文章的时候只是套主题并不去看templates）。像我一开始没加的时候，主页的博客预览是全文显示的，丑到直男审美都看不下去。加了之后神奇地发现博客预览只剩下两行了。原来我这个主题生成页面时会剪两行的内容放在主页作为预览，但是如果它不知道是中文，字数统计就会出问题，连带着预览整个崩溃。&lt;/p&gt;
+&lt;p&gt;如果要写中文博客的话，config里最好把这个设为true（表示含有中文/日文/韩文）。不然的话会有难以预料的麻烦（尤其是开始写文章的时候只是套主题并不去看templates）。像我一开始没加的时候，主页的博客预览是全文显示的，丑到直男审美都看不下去。加了之后神奇地发现博客预览只剩下两行了。&lt;br /&gt;
+其实是因为Hugo默认会将文章的前70个单词拎出来存在.Summary变量里，见&lt;a href=&#34;https://gohugo.io/content/summaries/&#34;&gt;官方文档-Summaries&lt;/a&gt;。如果它不知道是中文，字数统计就会出问题，连带着预览整个崩溃。&lt;/p&gt;
 
 &lt;h3 id=&#34;代码高亮-pygments方式&#34;&gt;代码高亮（Pygments方式）&lt;/h3&gt;
 
@@ -42,8 +43,48 @@
 &lt;p&gt;Pygments is relatively slow and &lt;em&gt;causes a performance hit when building your site&lt;/em&gt;, but Hugo has been designed to cache the results to disk.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;看着下面的js高亮方式，我顿时有种想要删号重练的心情。貌似那个改CSS配色还比较方便。&lt;br /&gt;
-下次看看有什么可以&lt;em&gt;显示行号&lt;/em&gt; 又好自定义的，今天折腾不动了。&lt;/p&gt;
+&lt;p&gt;看着下面的js高亮方式，我顿时有种想要删号重练的心情。&lt;del&gt;貌似那个改CSS配色还比较方便。&lt;br /&gt;
+下次看看有什么可以显示行号又好自定义的，今天折腾不动了。&lt;/del&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;代码高亮-highlight-js方式-2-march-update&#34;&gt;代码高亮（Highlight.js方式）  &lt;strong&gt;- 2 March Update&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;现已更新为使用Highlight.js高亮代码，配色是&lt;em&gt;pojoaque&lt;/em&gt; 。暂时觉得行号没必要。
+先找到./layouts/partials/header，仿照darksimplicity主题中写好的CSS引用方式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;{{ &amp;quot;/css/style.min.css&amp;quot; | relURL }}&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我使用的是本地下载并放在static文件夹里的方式，传上去之后就是以baseUrl开头的路径，所以才有仿写的必要。&lt;br /&gt;
+引用Highlight的js和css文件的仿写:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!-- highlight.js --&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;{{ &amp;quot;/highlight.pack.js&amp;quot; | relURL }}&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;{{ &amp;quot;/styles/pojoaque.css&amp;quot; | relURL }}&amp;quot;&amp;gt;
+&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;简单粗暴地从诸如&lt;a href=&#34;http://www.bootcdn.cn/highlight.js/&#34;&gt;bootcdn&lt;/a&gt;的地方直接引用js和CSS也没人拦你。
+比如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script src=&amp;quot;https://cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;link href=&amp;quot;https://cdn.bootcss.com/highlight.js/9.9.0/styles/pojoaque.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样还不必保存pojoaque的背景图片😅&lt;br /&gt;
+比较配色的时候就用官方的预览吧→&lt;a href=&#34;https://highlightjs.org/static/demo/&#34;&gt;Highlight.js自带配色预览&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最后还有个挺烦的问题就是代码太长的时候会有滚动条，浏览起来贼难受，可是也没想到什么更好的方案。待解决。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IE呆又呆</title>
+      <link>https://placy3.github.io/post/theLastOfFeb%20-%20old/</link>
+      <pubDate>Tue, 28 Feb 2017 19:46:15 UTC</pubDate>
+      
+      <guid>https://placy3.github.io/post/theLastOfFeb%20-%20old/</guid>
+      <description>
 
 &lt;h1 id=&#34;flex-ie&#34;&gt;Flex &amp;amp; IE&lt;/h1&gt;
 
@@ -58,15 +99,16 @@
 
 &lt;p&gt;而解决article被挤扁的方法就是给它设定一个flex-basis值，用auto还不行。
 本例中70vw足够撑满了：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;article&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;display&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;flex&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;        
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;flex-flow&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;row&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;wrap&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;max-width&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;margin-left&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;auto&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;margin-right&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;auto&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;flex-basis&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;70&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;vw&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;  &lt;span style=&#34;color: #75715e&#34;&gt;/*IE 11*/&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;article{
+    display: flex;        
+    flex-flow: row wrap;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: 70vw;  /*IE 11*/
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;恕我才疏学浅，还没明白flex-flow的作用。
 然后我还发现在IE下我给主页写的文章预览的文字渐变也没了，不过没心思改。&lt;/p&gt;
@@ -105,10 +147,11 @@
 &lt;p&gt;简单的解决方案：换主题。&lt;br /&gt;
 详细的解决方案：检查主题的layouts/_default/文件夹（网站根目录的layout默认是空的），single是单篇博文，打开检查生成方式。&lt;br /&gt;
 像&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;isset&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;Params&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}&lt;/span&gt;
-&lt;span style=&#34;color: #a6e22e&#34;&gt;tags&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;Params&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;tags&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}{{&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;}}&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Javascript&#34;&gt;{{ if isset .Params &amp;quot;tags&amp;quot; }}
+tags:
+{{ range .Params.tags }}{{ . }} {{ end }}  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;这样的才是真正会创建tags的&lt;/p&gt;
 

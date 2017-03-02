@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Css on Placy </title>
+      <title>Js on Placy </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>https://placy3.github.io/tags/css/index.xml</link>
+    <link>https://placy3.github.io/tags/js/index.xml</link>
     <language>zh-Hans</language>
     
     <copyright>&amp;copy 2017. placy3 on github.</copyright>
@@ -75,50 +75,6 @@
 比较配色的时候就用官方的预览吧→&lt;a href=&#34;https://highlightjs.org/static/demo/&#34;&gt;Highlight.js自带配色预览&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;最后还有个挺烦的问题就是代码太长的时候会有滚动条，浏览起来贼难受，可是也没想到什么更好的方案。待解决。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>IE呆又呆</title>
-      <link>https://placy3.github.io/post/theLastOfFeb%20-%20old/</link>
-      <pubDate>Tue, 28 Feb 2017 19:46:15 UTC</pubDate>
-      
-      <guid>https://placy3.github.io/post/theLastOfFeb%20-%20old/</guid>
-      <description>
-
-&lt;h1 id=&#34;flex-ie&#34;&gt;Flex &amp;amp; IE&lt;/h1&gt;
-
-&lt;p&gt;今天用IE 11开了一下这个博客，内容完全挤成一条，F12一看是被挤扁的是article元素。禁用&lt;code&gt;display: flex;&lt;/code&gt;这一行就能并不优雅地解决问题。因为我这是个极简风主页，问题不大，唯一的不同就是标签错位了。&lt;br /&gt;
-我虽然没用过flex（弹性盒子），但是硬着头皮翻看CSS的过程中，大概也有个概念。毕竟有一些神奇的计算公式出现。最后我把article的CSS部分找了出来，首先试着把兼容的各种display写法都拷了上去，然而并没有解决问题。&lt;br /&gt;
-原因很简单，IE 11本身其实是支持 &lt;code&gt;display: flex&lt;/code&gt; 的，当然不会使用其他写法了。&lt;br /&gt;
-后来看到&lt;a href=&#34;http://caniuse.com/#feat=flexbox&#34;&gt;Can I use&lt;/a&gt;里的Known Issues才精神一振，才发现还有个flex-basis属性。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;flex-basis&lt;/strong&gt; 指定了 flex 元素在主轴方向上的初始大小。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;而解决article被挤扁的方法就是给它设定一个flex-basis值，用auto还不行。
-本例中70vw足够撑满了：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;article{
-    display: flex;        
-    flex-flow: row wrap;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    flex-basis: 70vw;  /*IE 11*/
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;恕我才疏学浅，还没明白flex-flow的作用。
-然后我还发现在IE下我给主页写的文章预览的文字渐变也没了，不过没心思改。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;关于IE和flex还有个bug：&lt;a href=&#34;https://connect.microsoft.com/IE/feedback/details/802625/min-height-and-flexbox-flex-direction-column-dont-work-together-in-ie-10-11-preview&#34;&gt;Min-height and flexbox (flex-direction:column) don&amp;rsquo;t work together in IE 10 &amp;amp; 11-preview. &lt;/a&gt;&lt;br /&gt;
-然而微软表示，在Edge里已经解决了，现在除非安全性原因，我们并不考虑修IE的bug。&lt;br /&gt;
-我一整个人……笑出声😆&lt;br /&gt;
-&lt;em&gt;测试&lt;del&gt;颜文字&lt;/del&gt; emoji↑&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

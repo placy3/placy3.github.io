@@ -10,40 +10,12 @@
     <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
     
     <item>
-      <title>解决了一点问题，顺手记录一下</title>
-      <link>https://placy3.github.io/post/theLastOfFeb/</link>
+      <title>IE呆又呆</title>
+      <link>https://placy3.github.io/post/theLastOfFeb%20-%20old/</link>
       <pubDate>Tue, 28 Feb 2017 19:46:15 UTC</pubDate>
       
-      <guid>https://placy3.github.io/post/theLastOfFeb/</guid>
+      <guid>https://placy3.github.io/post/theLastOfFeb%20-%20old/</guid>
       <description>
-
-&lt;h1 id=&#34;config-toml&#34;&gt;Config.toml&lt;/h1&gt;
-
-&lt;p&gt;反正没什么偏好，就先用着.tmol格式了。&lt;/p&gt;
-
-&lt;h3 id=&#34;hascjklanguage&#34;&gt;hasCJKLanguage&lt;/h3&gt;
-
-&lt;p&gt;如果要写中文博客的话，config里最好把这个设为true（表示含有中文/日文/韩文）。不然的话会有难以预料的麻烦（尤其是开始写文章的时候只是套主题并不去看templates）。像我一开始没加的时候，主页的博客预览是全文显示的，丑到直男审美都看不下去。加了之后神奇地发现博客预览只剩下两行了。原来我这个主题生成页面时会剪两行的内容放在主页作为预览，但是如果它不知道是中文，字数统计就会出问题，连带着预览整个崩溃。&lt;/p&gt;
-
-&lt;h3 id=&#34;代码高亮-pygments方式&#34;&gt;代码高亮（Pygments方式）&lt;/h3&gt;
-
-&lt;p&gt;按照Hugo官方文档来，把pygments装好，config里加一句&lt;code&gt;pygmentsCodeFences = true&lt;/code&gt;，再在代码块的```之后声明语言即可，默认主题是monokai。&lt;br /&gt;
-例如下面那个代码块在md文件里的开头是&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;``` CSS&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;但是！&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;文档在介绍完pygments之后又来了一段Disclaimers。&lt;/strong&gt;&lt;br /&gt;
-第一句就是：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Pygments is relatively slow and &lt;em&gt;causes a performance hit when building your site&lt;/em&gt;, but Hugo has been designed to cache the results to disk.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;看着下面的js高亮方式，我顿时有种想要删号重练的心情。貌似那个改CSS配色还比较方便。&lt;br /&gt;
-下次看看有什么可以&lt;em&gt;显示行号&lt;/em&gt; 又好自定义的，今天折腾不动了。&lt;/p&gt;
 
 &lt;h1 id=&#34;flex-ie&#34;&gt;Flex &amp;amp; IE&lt;/h1&gt;
 
@@ -58,15 +30,16 @@
 
 &lt;p&gt;而解决article被挤扁的方法就是给它设定一个flex-basis值，用auto还不行。
 本例中70vw足够撑满了：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;article&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;display&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;flex&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;        
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;flex-flow&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;row&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;wrap&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;max-width&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;%&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;margin-left&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;auto&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;margin-right&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;auto&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
-	&lt;span style=&#34;color: #66d9ef&#34;&gt;flex-basis&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;70&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;vw&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;  &lt;span style=&#34;color: #75715e&#34;&gt;/*IE 11*/&lt;/span&gt;
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-CSS&#34;&gt;article{
+    display: flex;        
+    flex-flow: row wrap;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: 70vw;  /*IE 11*/
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;恕我才疏学浅，还没明白flex-flow的作用。
 然后我还发现在IE下我给主页写的文章预览的文字渐变也没了，不过没心思改。&lt;/p&gt;

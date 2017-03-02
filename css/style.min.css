@@ -4,11 +4,12 @@
 
 /*以上为自行新增的CSS*/
 code{
-/*	font-size: larger;*/
+	font-size: larger;
 	color: #ff7400;
+	word-break: keep-all;
+	white-space: pre;
 }
 pre{
-	font-size: x-large;
 	padding: 5px;
 	background-color: #1F1F1F;
 }
