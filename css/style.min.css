@@ -4,8 +4,8 @@
 
 /*以上为自行新增的CSS*/
 code{
-	font-size: larger;
-	color: #ff7400;
+	font-family: 'Roboto Mono', monospace;
+	color: #FF7400;
 	word-break: keep-all;
 	white-space: pre;
 }
