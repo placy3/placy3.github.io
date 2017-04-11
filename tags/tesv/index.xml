@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Tesv on Placy </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://placy3.github.io/tags/tesv/index.xml</link>
+    <language>zh-Hans</language>
+    
+    <copyright>&amp;copy 2017. placy3 on github.</copyright>
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    
+    <item>
+      <title>天际白玩日常</title>
+      <link>https://placy3.github.io/post/skyrimTIL/</link>
+      <pubDate>Tue, 11 Apr 2017 21:41:59 BST</pubDate>
+      
+      <guid>https://placy3.github.io/post/skyrimTIL/</guid>
+      <description>
+
+&lt;p&gt;近期疲于作业和准备期末，上进心丢失，一直没有自学方面的进步。&lt;br /&gt;
+打算把一篇长期更新的文章放在这里。内容是每次玩天际时的新发现。以累积游玩时间作为标记。&lt;br /&gt;
+打的mod有八九十个了，有些事件不能确定是不是原版内容。&lt;/p&gt;
+
+&lt;h1 id=&#34;385小时&#34;&gt;385小时&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在天际里有一种插着帝国和风暴斗篷小旗的地图。上面的旗子可以互动，当你和一个没发现过的地点互动时，地图上就会显示出那个地点（未发现状态）。&lt;br /&gt;
+比如有一面裂谷领的旗子写的是Fort Greenwall，原本在我的地图上是没有显示出来的，我E了一下旗子之后，左上角提示Map updated，这时打开地图就会看见出现了黑色的Fort Greenwall。类似从卫兵对话中得知新地点。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;晨星和冬堡，初入天际时是属于风暴势力。这两个地方都没有宫廷法师，只有一个类似军事顾问的大汉。奇怪的是，我记得晨星是有宫廷法师的，不知道是不是谈判之后的变化。而且晨星有附魔台和炼金材料架子，看上去只缺一个NPC。&lt;/li&gt;
+&lt;li&gt;M&amp;rsquo;aiq说他没去过冬堡。&lt;/li&gt;
+&lt;li&gt;冬堡学院的Archmage是真的不干活。学院由Master-Wizard运作。&lt;/li&gt;
+&lt;li&gt;前作湮灭以及Lore中的法师公会是严禁死灵法术的。此事和虫王有很大的关系。天际的冬堡学院表面上和法师公会立场一致，实际上却默许死灵法术的研究，只是最好隐蔽一些。召唤系老师Phinis Gestor对死灵法术表示了认可。&lt;br /&gt;
+&lt;em&gt;在冰上之血任务中，当你质疑风盔的宫廷法师是死灵法师时，他会愤怒地表明自己是冬堡学院的一员。也就是说，冬堡学院被认为是反对死灵法师的“权威”。&lt;/em&gt; 然而事实并非如此。&lt;/li&gt;
+&lt;li&gt;莫萨尔的神秘法师Falion曾经在学院呆过，甚至还做过Phinis的老师。所以在游戏中他是大师级召唤系训练师，而Phinis只是专家级。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不知道为什么，黑底白字是自己选的，字体大小也是自己调的，现在却觉得分外刺眼😒&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
