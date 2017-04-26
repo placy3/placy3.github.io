@@ -1,6 +1,6 @@
-$(document).keydown(function (event) {
-    console.log(event.keyCode);     // BTW, 116 = F5
-});
+// $(document).keydown(function (event) {
+//     console.log(event.keyCode);     // BTW, 116 = F5
+// });
 
 var myGamePiece;
 
