@@ -34,8 +34,9 @@
 &lt;li&gt;莫萨尔的神秘法师Falion曾经在学院呆过，甚至还做过Phinis的老师。所以在游戏中他是大师级召唤系训练师，而Phinis只是专家级。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;不知道为什么，黑底白字是自己选的，字体大小也是自己调的，现在却觉得分外刺眼😒&lt;br /&gt;
-&lt;strong&gt;12 Apr: 文本颜色调整为#ccc&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不知道为什么，黑底白字是自己选的，字体大小也是自己调的，现在却觉得分外刺眼😒&lt;/p&gt;
+
+&lt;p&gt;**调整文本颜色失败，原因不明：在hugo server状态下编辑CSS，页面刷新之后更改全数还原。只有publish之后才能看到更改。 **&lt;/p&gt;
 </description>
     </item>
     

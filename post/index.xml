@@ -7,7 +7,76 @@
     <language>zh-Hans</language>
     
     <copyright>&amp;copy 2017. placy3 on github.</copyright>
-    <updated>Tue, 11 Apr 2017 21:41:59 BST</updated>
+    <updated>Wed, 10 May 2017 12:20:52 BST</updated>
+    
+    <item>
+      <title>用svg画了个世末舞厅</title>
+      <link>https://placy3.github.io/post/svg1/</link>
+      <pubDate>Wed, 10 May 2017 12:20:52 BST</pubDate>
+      
+      <guid>https://placy3.github.io/post/svg1/</guid>
+      <description>&lt;p&gt;&lt;svg height=&#34;405&#34; width=&#34;720&#34;&gt;
+    &lt;polygon points=&#34;0,0 0,405 720,405 720,0&#34;
+    style=&#34;fill:white;fill-rule:evenodd;&#34;/&gt;
+    &lt;polygon points=&#34;720,40 350,202 720,365&#34;
+    style=&#34;fill:#757575;fill-rule:evenodd; stroke-width:0.5;stroke:#676767&#34;/&gt;
+    &lt;polygon points=&#34;0,40 370,202 0,365&#34;    
+    style=&#34;fill:#B8B8B8;fill-rule:evenodd; stroke-width:0.5;stroke:#A8A8A8&#34;/&gt;
+    &lt;rect x=&#34;150&#34; y=&#34;100&#34; width=&#34;424&#34; height=&#34;204&#34; 
+        style=&#34;fill:#757575; stroke-width:4;stroke:white&#34;/&gt;
+    &lt;rect x=&#34;362&#34; y=&#34;102&#34; width=&#34;210&#34; height=&#34;200&#34; 
+        style=&#34;fill:#B8B8B8; stroke-width:0.5;stroke:#A8A8A8&#34;/&gt;
+    &lt;rect x=&#34;202&#34; y=&#34;142&#34; width=&#34;105&#34; height=&#34;125&#34; 
+        style=&#34;fill:white; stroke-width:3;stroke:#B8B8B8&#34;/&gt;
+    &lt;rect x=&#34;414&#34; y=&#34;142&#34; width=&#34;105&#34; height=&#34;125&#34; 
+        style=&#34;fill:white; stroke-width:3;stroke:#757575&#34;/&gt;
+    &lt;rect x=&#34;212&#34; y=&#34;200&#34; width=&#34;10&#34; height=&#34;10&#34; 
+        style=&#34;fill:#B8B8B8;&#34;/&gt;
+    &lt;rect x=&#34;500&#34; y=&#34;200&#34; width=&#34;10&#34; height=&#34;10&#34; 
+        style=&#34;fill:#757575;&#34;/&gt;
+    &lt;text x=&#34;264&#34; y=&#34;84&#34; fill=&#34;#757575&#34; style=&#34;font-size: 17px; font-family: Arial;&#34;&gt;World&amp;rsquo;s End Dancehall.&amp;nbsp;&amp;nbsp;&amp;darr;&lt;/text&gt;
+    &lt;text x=&#34;264&#34; y=&#34;84&#34; fill=&#34;#757575&#34; transform=&#34;rotate(180 360,202.5)&#34; 
+    style=&#34;font-size: 17px; font-family: Arial;&#34;&gt;
+    World&amp;rsquo;s End Dancehall.&amp;nbsp;&amp;nbsp;&amp;darr;&lt;/text&gt;
+&lt;/svg&gt;&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;svg height=&amp;quot;405&amp;quot; width=&amp;quot;720&amp;quot;&amp;gt;
+    &amp;lt;polygon points=&amp;quot;0,0 0,480 720,480 720,0&amp;quot;
+    style=&amp;quot;fill:white;fill-rule:evenodd;&amp;quot;/&amp;gt;
+    &amp;lt;!-- 左右梯形 --&amp;gt;
+    &amp;lt;polygon points=&amp;quot;720,40 350,202 720,365&amp;quot;
+    style=&amp;quot;fill:#757575;fill-rule:evenodd; stroke-width:0.5;stroke:#676767&amp;quot;/&amp;gt;
+    &amp;lt;polygon points=&amp;quot;0,40 370,202 0,365&amp;quot;    
+    style=&amp;quot;fill:#B8B8B8;fill-rule:evenodd; stroke-width:0.5;stroke:#A8A8A8&amp;quot;/&amp;gt;
+    &amp;lt;!-- 中间方块 --&amp;gt;
+    &amp;lt;rect x=&amp;quot;150&amp;quot; y=&amp;quot;100&amp;quot; width=&amp;quot;424&amp;quot; height=&amp;quot;204&amp;quot; 
+        style=&amp;quot;fill:#757575; stroke-width:4;stroke:white&amp;quot;/&amp;gt;
+    &amp;lt;rect x=&amp;quot;362&amp;quot; y=&amp;quot;102&amp;quot; width=&amp;quot;210&amp;quot; height=&amp;quot;200&amp;quot; 
+        style=&amp;quot;fill:#B8B8B8; stroke-width:0.5;stroke:#A8A8A8&amp;quot;/&amp;gt;
+    &amp;lt;!-- 左右门 --&amp;gt;
+    &amp;lt;rect x=&amp;quot;202&amp;quot; y=&amp;quot;142&amp;quot; width=&amp;quot;105&amp;quot; height=&amp;quot;125&amp;quot; 
+        style=&amp;quot;fill:white; stroke-width:3;stroke:#B8B8B8&amp;quot;/&amp;gt;
+    &amp;lt;rect x=&amp;quot;414&amp;quot; y=&amp;quot;142&amp;quot; width=&amp;quot;105&amp;quot; height=&amp;quot;125&amp;quot; 
+        style=&amp;quot;fill:white; stroke-width:3;stroke:#757575&amp;quot;/&amp;gt;
+    &amp;lt;!-- 门把 --&amp;gt;
+    &amp;lt;rect x=&amp;quot;212&amp;quot; y=&amp;quot;200&amp;quot; width=&amp;quot;10&amp;quot; height=&amp;quot;10&amp;quot; 
+        style=&amp;quot;fill:#B8B8B8;&amp;quot;/&amp;gt;
+    &amp;lt;rect x=&amp;quot;500&amp;quot; y=&amp;quot;200&amp;quot; width=&amp;quot;10&amp;quot; height=&amp;quot;10&amp;quot; 
+        style=&amp;quot;fill:#757575;&amp;quot;/&amp;gt;
+    &amp;lt;!-- 字 --&amp;gt;
+    &amp;lt;text x=&amp;quot;264&amp;quot; y=&amp;quot;84&amp;quot; fill=&amp;quot;#757575&amp;quot; 
+        style=&amp;quot;font-size: 17px; font-family: Arial;&amp;quot;&amp;gt;
+    World&#39;s End Dancehall.&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;darr;&amp;lt;/text&amp;gt;
+                &amp;lt;!-- 下方文字以中心为轴旋转了半圈，坐标相同 --&amp;gt;
+    &amp;lt;text x=&amp;quot;264&amp;quot; y=&amp;quot;84&amp;quot; fill=&amp;quot;#757575&amp;quot; transform=&amp;quot;rotate(180 360,202.5)&amp;quot; 
+        style=&amp;quot;font-size: 17px; font-family: Arial;&amp;quot;&amp;gt;
+    World&#39;s End Dancehall.&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;darr;&amp;lt;/text&amp;gt;
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;\wowaka!/\wowaka!/&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>天际白玩日常</title>
@@ -34,8 +103,9 @@
 &lt;li&gt;莫萨尔的神秘法师Falion曾经在学院呆过，甚至还做过Phinis的老师。所以在游戏中他是大师级召唤系训练师，而Phinis只是专家级。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;不知道为什么，黑底白字是自己选的，字体大小也是自己调的，现在却觉得分外刺眼😒&lt;br /&gt;
-&lt;strong&gt;12 Apr: 文本颜色调整为#ccc&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不知道为什么，黑底白字是自己选的，字体大小也是自己调的，现在却觉得分外刺眼😒&lt;/p&gt;
+
+&lt;p&gt;**调整文本颜色失败，原因不明：在hugo server状态下编辑CSS，页面刷新之后更改全数还原。只有publish之后才能看到更改。 **&lt;/p&gt;
 </description>
     </item>
     

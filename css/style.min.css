@@ -33,8 +33,8 @@ p{
 @font-face{font-family:Lora;font-style:italic;font-weight:700;src:local("Lora Bold Italic"),local(Lora-BoldItalic),url(https://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7fY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(https://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(https://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7T8E0i7KZn-EPnyo3HZu7kw.woff) format("woff")}
 @font-face{font-family:Lora;font-style:normal;font-weight:400;src:local(Lora),local(Lora-Regular),url(https://fonts.gstatic.com/s/lora/v9/rMDaOpSw-8ss9B8Y3bLqyA.eot?#) format("eot"),url(https://fonts.gstatic.com/s/lora/v9/5-AYViExptypIdFoLKAxTA.woff) format("woff2"),url(https://fonts.gstatic.com/s/lora/v9/5-AYViExptypIdFoLKAxTA.woff) format("woff")}
 @font-face{font-family:Lora;font-style:normal;font-weight:700;src:local("Lora Bold"),local(Lora-Bold),url(https://fonts.gstatic.com/s/lora/v9/1HJZfNlOezBHPPwzRKlEcQ.eot?#) format("eot"),url(https://fonts.gstatic.com/s/lora/v9/XpaepWHcooQHSRnzoohUng.woff) format("woff2"),url(https://fonts.gstatic.com/s/lora/v9/XpaepWHcooQHSRnzoohUng.woff) format("woff")}
-body{line-height:1.6;font-weight:400;font-family:Lora,"Wenquanyi Micro Hei", "WenQuanYi Zen Hei","Microsoft YaHei", "微软雅黑", "ST Heiti", SimHei, HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;background:#181818}
-.post-list-pagination,a:hover,body{color:#ccc;}
+body{line-height:1.6;font-weight:400;font-family:Lora,"Wenquanyi Micro Hei", "WenQuanYi Zen Hei","Microsoft YaHei", "微软雅黑", "ST Heiti", SimHei, HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;background:#181818;color:#CCCCCC;}
+.post-list-pagination,a:hover,body{color:#ccc;} 
 .wrap{display:flex;flex-flow:row wrap;max-width:70%;margin-left:auto;margin-right:auto}
 h1,h2,h3,h4,h5,h6{color:#676767}
 .header,.navbar{flex-grow:0;flex-shrink:0;flex-basis:calc(99.9% * 1 - (30px - 30px * 1));width:calc(99.9% * 1 - (30px - 30px * 1))}
