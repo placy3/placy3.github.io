@@ -9,7 +9,7 @@ var SPEED = 4;
 
 function startGame() {
     myGameArea.start();
-    myGamePiece = new component(r, "black", 240, 400);
+    myGamePiece = new component(r, "#CCCCCC", 240, 400);
 }
 
 var myGameArea = {
